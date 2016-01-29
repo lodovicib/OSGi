@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m2dl.osgi.editor.CodeViewerController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Fichier">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#fireMenuOpenFile" text="Ouvrir" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#fireMenuCloseFile" text="Fermer" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#fireMenuExit" text="Quitter" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Bundles OSGi">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#fireMenuLoadBundle" text="Load bundle" />
+                  <RadioMenuItem fx:id="radioMenuDecorator" mnemonicParsing="false" onAction="#fireRadioMenuDecorator" text="Decorator bundle" />
+                  <RadioMenuItem fx:id="radioMenuCSS" mnemonicParsing="false" onAction="#fireRadioMenuCSS" text="CSS bundle" />
+                  <RadioMenuItem fx:id="radioMenuJava" mnemonicParsing="false" onAction="#fireRadioMenuJava" text="Java bundle" />
+               </items>
+            </Menu>
+        <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#fireMenuAPropos" text="À propos" />
+               </items></Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <WebView fx:id="webViewer" layoutX="168.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

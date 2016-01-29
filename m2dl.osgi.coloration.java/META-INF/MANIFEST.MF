@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Editor
+Bundle-SymbolicName: m2dl.osgi.coloration.java;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: m2dl.osgi.coloration.java.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.apache.log4j;version="1.2.15", m2dl.osgi.editor.service
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/jfxrt.jar,
+ .
+Require-Bundle: org.eclipse.osgi,
+ m2dl.osgi.editor;bundle-version="1.0.0"

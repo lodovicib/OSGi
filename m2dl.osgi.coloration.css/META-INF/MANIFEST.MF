@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Css
+Bundle-SymbolicName: m2dl.osgi.coloration.css;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: m2dl.osgi.coloration.css.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: m2dl.osgi.editor,
+ m2dl.osgi.editor.service,
+ org.apache.log4j;version="1.2.15"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.osgi;bundle-version="3.10.101"
+Export-Package: m2dl.osgi.coloration.css
